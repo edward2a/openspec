@@ -1,0 +1,22 @@
+{
+    "applicationSpec": {
+        "syntax":  "v0.0.1",
+        "version": "0000000000000001"
+    },
+    "application": {
+        "language": {
+            "type": "ruby",
+            "version": "2.1"
+        },
+        "port": 8080,
+        "location": "/rubytest",
+        "systemRequirements": {
+            "packages": {
+                "build-essential",
+                "libjpeg"
+            },
+            "groups": ["rubyapp"],
+            "users": ["rubyapp"]
+        }
+    }
+}

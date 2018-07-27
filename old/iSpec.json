@@ -1,0 +1,37 @@
+{
+    "infrastructureSpec": {
+        "syntax":  "v0.0.1",
+        "version": "0000000000000001"
+    },
+    "environments": [
+        "dev": { "dailyShutdown": "yes" },
+        "int": { "dailyShutdown": "yes" },
+        "uat": { "dailyShutdown": "yes" },
+        "staging": { "dailyShutdown": "yes" },
+        "prod": { "dailyShutdown": "no" }
+    ],
+    "root":{
+        "vpc": {
+            "public": "yes",
+            "private": "yes"
+        },
+        "apps": [
+            "app1": {
+                "asg": "yes",
+                "elb": "public",
+                "dynamodb": "no",
+                "rds": "mysql",
+                "elasticache": "memcached"
+            },
+
+            "app2": {
+                "asg": "yes",
+                "elb": "private",
+                "dynamodb": "yes",
+                "rds": "no",
+                "elasticache": "no"
+            }
+        ]
+    }
+
+}
